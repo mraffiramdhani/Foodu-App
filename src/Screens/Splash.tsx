@@ -1,10 +1,17 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {Colors, Layout} from '../Styles';
+import {SplashScreenProps} from '../Types/Navigator';
 
 import Logo from '../Assets/Images/logo.svg';
 
-export default function Splash() {
+const Splash: SplashScreenProps = ({navigation}) => {
+  React.useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('IntroScreen');
+    }, 3000);
+  }, []);
+
   return (
     <View
       style={[
@@ -15,8 +22,18 @@ export default function Splash() {
       ]}>
       <View style={[Layout.flexRow, Layout.itemsCenter]}>
         <Logo />
-        <Text>Foodu</Text>
+        <Text
+          style={{
+            fontFamily: 'Figtree-Bold',
+            fontSize: 48,
+            color: 'black',
+            marginLeft: 16,
+          }}>
+          Foodu
+        </Text>
       </View>
     </View>
   );
-}
+};
+
+export default Splash;

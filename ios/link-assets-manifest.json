@@ -1,0 +1,33 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/Assets/Fonts/Figtree-Black.ttf",
+      "sha1": "93aff7bc8a21e99324a0455afb22b3036bd33a3d"
+    },
+    {
+      "path": "src/Assets/Fonts/Figtree-Bold.ttf",
+      "sha1": "9f990a2fb0cf173987df7ffbcfbae768fbb3dcf3"
+    },
+    {
+      "path": "src/Assets/Fonts/Figtree-ExtraBold.ttf",
+      "sha1": "6084a825cac04c726d2dbf60be921f53f3d6b1f7"
+    },
+    {
+      "path": "src/Assets/Fonts/Figtree-Light.ttf",
+      "sha1": "67a68a330509aa158c0201d2588d31c35abaa83e"
+    },
+    {
+      "path": "src/Assets/Fonts/Figtree-Medium.ttf",
+      "sha1": "8695931dcf595c7ec6778b1141b427b9e1240c5e"
+    },
+    {
+      "path": "src/Assets/Fonts/Figtree-Regular.ttf",
+      "sha1": "08da8a131700eb64296804009be69607b5cceecf"
+    },
+    {
+      "path": "src/Assets/Fonts/Figtree-SemiBold.ttf",
+      "sha1": "f44748e22a5aae810695599482a57c56e6bd045f"
+    }
+  ]
+}

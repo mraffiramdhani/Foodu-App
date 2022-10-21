@@ -1,7 +1,11 @@
-import {View, Text} from 'react-native';
 import React from 'react';
-import Splash from './Screens/Splash';
+import {NavigationContainer} from '@react-navigation/native';
+import Main from './Navigators/Main';
 
 export default function App() {
-  return <Splash />;
+  return (
+    <NavigationContainer>
+      <Main />
+    </NavigationContainer>
+  );
 }
