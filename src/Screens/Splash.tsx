@@ -4,11 +4,12 @@ import {Colors, Layout} from '../Styles';
 import {SplashScreenProps} from '../Types/Navigator';
 
 import Logo from '../Assets/Images/logo.svg';
+import {navigateAndSimpleReset} from '../Navigators/utils';
 
-const Splash: SplashScreenProps = ({navigation}) => {
+const Splash: SplashScreenProps = () => {
   React.useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('IntroScreen');
+      navigateAndSimpleReset('IntroScreen');
     }, 3000);
   }, []);
 
