@@ -6,6 +6,7 @@ import {
   NativeSyntheticEvent,
   NativeScrollEvent,
   Animated,
+  Text,
 } from 'react-native';
 import OnboardingSlide from '../Components/OnboardingSlide';
 
@@ -13,6 +14,7 @@ import SlideOne from '../Assets/Images/light_walkthrough_1.svg';
 import SlideTwo from '../Assets/Images/light_walkthrough_2.svg';
 import SlideThree from '../Assets/Images/light_walkthrough_3.svg';
 import CommonButton from '../Components/CommonButton';
+import {OnboardingScreenProps} from '../Types/Navigator';
 
 const slideData = [
   {
@@ -33,10 +35,13 @@ const slideData = [
 ];
 
 const {width} = Dimensions.get('window');
-const Onboarding = () => {
+const Onboarding: OnboardingScreenProps = ({navigation}) => {
   const scrollRef = React.useRef<ScrollView>(null);
 
   const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  const navigateAuth = () =>
+    navigation.navigate('AuthNavigator', {screen: 'AuthSelection'});
 
   const handleScrollPage = (event: NativeSyntheticEvent<NativeScrollEvent>) =>
     setCurrentIndex(Math.round(event.nativeEvent.contentOffset.x / width));
@@ -133,7 +138,11 @@ const Onboarding = () => {
           ))}
         </View>
         <CommonButton
-          onPress={handleScrollTo(currentIndex + 1)}
+          onPress={
+            currentIndex === slideData.length - 1
+              ? navigateAuth
+              : handleScrollTo(currentIndex + 1)
+          }
           text={currentIndex === slideData.length - 1 ? 'Get Started' : 'Next'}
         />
       </View>

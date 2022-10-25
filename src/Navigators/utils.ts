@@ -2,11 +2,11 @@ import {
   CommonActions,
   createNavigationContainerRef,
 } from '@react-navigation/native';
-import {RootStackParamList} from '../Types/Navigator';
+import {AuthStackParamList, RootStackParamList} from '../Types/Navigator';
 
 declare global {
   namespace ReactNavigation {
-    interface RootParamList extends RootStackParamList {}
+    interface RootParamList extends RootStackParamList, AuthStackParamList {}
   }
 }
 
